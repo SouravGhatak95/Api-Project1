@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>What's ur Avatar?</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+ <style type="text/css">
+ 	body{
+ 		background-color: #40c76f;
+ 	}
+		
+	section{
+		position: absolute;
+		text-align: center;
+		top: 80px;
+	}	
+	
+	section h1{
+		position: relative;
+		left: 40px;
+		color: #fff;
+		font-weight: bolder;
+	}
+
+	.centerDiv{
+		position: absolute;
+		background-color: #d9d332;
+		left: 450px;
+		top: 88px;
+		width: 300px;
+		height: 400px;
+	}
+
+	.details{
+		padding: 30px;
+	}
+
+	.centerDiv button{
+		position: relative;
+		bottom: -30px;
+		background-color: #32d9cb;
+	}
+
+ </style>
+</head>
+<body>
+
+	<section>
+		<h1>WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY?</h1>
+		<div class="centerDiv">
+			<div class="details">
+				<label>ENTER YOUR NAME</label>
+				<input type="text" name="" id="nameid" style="background-color: #d94b32; height: 40px; width: 220px;">
+			</div>
+				
+				<div class="imgdiv">
+					<img src="welcome.jpg" width="200px" height="200px" class="imgchange">
+				</div>
+
+				<button>Click Me</button>
+		</div>
+
+	</section>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('button').on('click', function() {
+				const name= $('#nameid').val();
+				alert(name);
+
+				$('.imgchange').attr('src', `https://joeschmoe.io/api/v1/${name}`);
+
+			});
+		});
+
+	</script>
+	
+</body>
+</html>
